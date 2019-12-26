@@ -81,14 +81,14 @@ Validating username and password using HTML,CSS and Javascript
     </script>
 
     <body>
-        <form onsubmit="return validate()" action="support file.html">
+        <form onsubmit="return validate()" action="support file.html"> //Any html file that has to be opened
         <div class="SignUp">
             <h1>WELCOME</h1>
         <div class="inputs">
             <i class="fa fa-user" aria-hidden="true"></i>
             <input type="text" id="username" placeholder="Enter Email ID" required>
-            <label id="error" style="color:red; visibility:hidden">INVALID</label>
-            <label id="errorstyle1" style="color:red; visibility:hidden">Fill the box</label>
+            <label id="error" style="color:red; visibility:hidden">INVALID</label> //Optional
+            <label id="errorstyle1" style="color:red; visibility:hidden">Fill the box</label>//Optional
         </div><br>
         <div class="inputs">
             <i class="fa fa-lock" aria-hidden="false"></i>
