@@ -82,7 +82,8 @@ Validating username and password using HTML,CSS and Javascript
 
     <body>
         <form onsubmit="return validate()" action="support file.html"> //Any html file that has to be opened
-        <div class="SignUp">
+      /* creation of sign up box div*/
+      <div class="SignUp">
             <h1>WELCOME</h1>
         <div class="inputs">
             <i class="fa fa-user" aria-hidden="true"></i>
