@@ -19,7 +19,7 @@ Validating username and password using HTML,CSS and Javascript
            
             var regx = /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8}).([a-z]{2,3})?$/;
            
-            if(regx.test(x)==true)
+            if(regx.test(x)==true)              //to check for regx 
                 {
                     
                     document.getElementById("error").style.visibility="visible";
