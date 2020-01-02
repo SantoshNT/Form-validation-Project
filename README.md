@@ -94,7 +94,7 @@ Validating username and password using HTML,CSS and Javascript
         <div class="inputs">
             <i class="fa fa-lock" aria-hidden="false"></i>
             <input type="password" id="password" placeholder="Enter Password" required>
-            <label id="errorstyle2" style="color:red; visibility:hidden">Fill the box</label>
+            <label id="errorstyle2" style="color:red; visibility:hidden">Fill the box</label>//Optional
             </div><br>
         <input class="button" type="submit" value="Sign In">
     </div>
