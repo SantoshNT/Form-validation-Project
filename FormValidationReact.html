@@ -1,0 +1,72 @@
+import React, { Component } from 'react'
+import './formcss.CSS'
+class Form extends Component {
+    constructor(props) {
+        super(props) 
+          this.inputRef = React.createRef()
+          this.state = {
+            Username:'',
+            Password:'',
+            Topic:'React',
+        }
+    } 
+    handleUserNameChange = (event) => {
+        this.setState({
+            Username:event.target.value
+        })
+    }
+    handlePasswordChange = (event) => {
+        this.setState({
+            Password:event.target.value
+        })
+    }
+    handleTopicChange = (event) => {
+        this.setState({
+            Topic:event.target.value
+        })
+    }
+    handleSubmit = (event) =>{
+        alert(`${this.state.Username} ${this.state.Password} ${this.state.Topic}`)
+        event.preventDefault()
+    }
+    componentDidMount(){
+        this.inputRef.current.focus()
+        console.log(this.inputRef)
+    }
+    render() {
+        const {username,Password,topic}= this.state
+        const mystyle = {
+            color:"black",
+            border:"2px solid black",
+            marginLeft:'40%',
+            marginRight:'40%',
+            marginTop:'10%',
+            backgroundColor:'orangered',
+            padding:'10px',
+            borderRadius:'20px'
+        };
+        return (
+        <form style={mystyle} onSubmit={this.handleSubmit}> 
+            <div>
+                <label>Username:</label>
+                <input type="text" value={username} ref={this.inputRef} onChange={this.handleUserNameChange}/> 
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" value={Password} onChange={this.handlePasswordChange}/> 
+            </div>
+            <div>
+                <label>Topics</label>
+                <select value={topic} onChange={this.handleTopicChange}>
+                    <option value='React'>React</option>
+                    <option value='Angular'>Angular</option>
+                    <option value='Vue'>Vue</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        )
+    }
+}
+
+export default Form
